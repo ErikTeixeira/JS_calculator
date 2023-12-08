@@ -1,15 +1,7 @@
 
-let bt1 = document.getElementById("bt1");
-let bt2 = document.getElementById("bt2");
-let bt3 = document.getElementById("bt3");
-let bt4 = document.getElementById("bt4");
-let bt5 = document.getElementById("bt5");
-let bt6 = document.getElementById("bt6");
-let bt7 = document.getElementById("bt7");
-let bt8 = document.getElementById("bt8");
-let bt9 = document.getElementById("bt9");
-let bt0 = document.getElementById("bt0");
+let botoesNumeros = document.querySelectorAll(".botaoNumero");
 
+let textoErro = document.querySelector("h3")
 
 let btSoma = document.getElementById("btSoma");
 let btSubtracao = document.getElementById("btSubtracao");
@@ -33,22 +25,25 @@ function limparNumeros(){
 }
 
 
-function inserirNumero(botao){
-    var valorDoBotao = botao.innerHTML;
+botoesNumeros.forEach(botao => {
+    botao.addEventListener('click', function() {
 
-    listaNumerosVisor.push(valorDoBotao);
+        let valorDoBotao = botao.innerHTML;
 
-    visorNumeros.value += valorDoBotao;
-}
+        listaNumerosVisor.push(valorDoBotao);
+
+        visorNumeros.value += valorDoBotao;
+    });
+});
 
 
 function inserirElemento(botao){
-    var valorBotao = botao.innerHTML;
+    let valorBotao = botao.innerHTML;
 
     if(listaNumerosVisor.length > 0) {
         var ultimoItem = listaNumerosVisor[listaNumerosVisor.length - 1];
 
-        if (['+', '-', 'X', '/', '.'].includes(valorBotao) && ['+', '-', 'X', '/', '.'].includes(ultimoItem)) {
+        if (['+', '-', '*', '/', '.'].includes(valorBotao) && ['+', '-', '*', '/', '.'].includes(ultimoItem)) {
             visorNumeros.value = visorNumeros.value.slice(0, -1) + valorBotao;
             listaNumerosVisor[listaNumerosVisor.length - 1] = valorBotao;
         } else {
@@ -59,11 +54,23 @@ function inserirElemento(botao){
 }
 
 
-function mostrarResultado(){
+function calculoResultado() {
+    // listaNumerosVisor for ['2', '+', '3', '*', '4'], após o join(''), expressao retornará '2+3*4'
+    let expressao = listaNumerosVisor.join('');
 
+    let resultado = eval(expressao); // Avalia a expressão matemática
+
+    if (isNaN(resultado)) {
+        textoErro.innerHTML = `It's not possible to perform the operation with this expression ${expressao}`;
+        return 0;
+    }
+
+    return resultado;
 }
 
-
-function calculoResultado(){
-
+function mostrarResultado() {
+    let resultado = calculoResultado();
+    visorNumeros.value = resultado;
+    listaNumerosVisor = [String(resultado)]; // Atualiza a lista apenas com o resultado
 }
+
