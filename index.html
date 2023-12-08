@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - JS</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/main.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Calculator</h1>
+    </header>
+    
+    <section>
+
+        <div class="calculadora">
+            <input id="visorNumeros" type="text">
+            <button id="btLimpar" onclick="limparNumeros()">C</button>
+
+            <div class="elementosCalculadora">
+                <button id="bt1"  onclick="inserirNumero(this)">1</button>
+                <button id="bt2" onclick="inserirNumero(this)">2</button>
+                <button id="bt3" onclick="inserirNumero(this)">3</button>
+                <button id="btSoma" onclick="inserirElemento(this)">+</button>
+                <button id="bt4" onclick="inserirNumero(this)">4</button>
+                <button id="bt5" onclick="inserirNumero(this)">5</button>
+                <button id="bt6" onclick="inserirNumero(this)">6</button>
+                <button id="btSubtracao" onclick="inserirElemento(this)">-</button>
+                <button id="bt7" onclick="inserirNumero(this)">7</button>
+                <button id="bt8" onclick="inserirNumero(this)">8</button>
+                <button id="bt9" onclick="inserirNumero(this)">9</button>
+                <button id="btMultiplicacao" onclick="inserirElemento(this)">X</button>
+                <button id="bt0" onclick="inserirNumero(this)">0</button>
+                <button id="btDivisao" onclick="inserirElemento(this)">/</button>
+                <button id="btPonto" onclick="inserirElemento(this)">.</button>
+                <button id="btIgual" onclick="mostrarResultado()">=</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>I created this calculator to practice my logic in JavaScript.</p>
+    </footer>
+
+</body>
+</html>
