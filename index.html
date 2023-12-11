@@ -10,8 +10,15 @@
 </head>
 <body>
 
-    <header>
+    <header class="header">
         <h1>Calculator</h1>
+
+        <button class="iconTheme">
+            <img src="./imgs/MoonIcon.svg" alt="Moon icon">
+        </button>
+        <a class="linkGitHub" href="https://github.com/ErikTeixeira/JS_calculator.git" target="_blank">
+            <img src="./imgs/GitHubDark.svg" alt="Git Hub Dark icon">
+        </a>
     </header>
     
     <section>
@@ -26,18 +33,18 @@
                 <button class="botaoNumero" id="bt1">1</button>
                 <button class="botaoNumero" id="bt2">2</button>
                 <button class="botaoNumero" id="bt3">3</button>
-                <button id="btSoma" onclick="inserirElemento(this)">+</button>
+                <button class="botoesElementos">+</button>
                 <button class="botaoNumero" id="bt4">4</button>
                 <button class="botaoNumero" id="bt5">5</button>
                 <button class="botaoNumero" id="bt6">6</button>
-                <button id="btSubtracao" onclick="inserirElemento(this)">-</button>
+                <button class="botoesElementos">-</button>
                 <button class="botaoNumero" id="bt7">7</button>
                 <button class="botaoNumero" id="bt8">8</button>
                 <button class="botaoNumero" id="bt9">9</button>
-                <button id="btMultiplicacao" onclick="inserirElemento(this)">*</button>
+                <button class="botoesElementos">x</button>
                 <button class="botaoNumero" id="bt0">0</button>
-                <button id="btDivisao" onclick="inserirElemento(this)">/</button>
-                <button id="btPonto" onclick="inserirElemento(this)">.</button>
+                <button class="botoesElementos">/</button>
+                <button class="botoesElementos">.</button>
                 <button id="btIgual" onclick="mostrarResultado()">=</button>
             </div>
 
