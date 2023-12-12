@@ -1,3 +1,4 @@
+
 body{
     background-color: var(--cor-de-fundo-light);
 }
@@ -21,6 +22,11 @@ h1{
     border: transparent;
     width: 2rem;
     height: 2.5rem;
+    margin: 10px;
+}
+
+#imgIcon{
+    cursor: pointer;
 }
 
 .linkGitHub{
@@ -67,7 +73,7 @@ input {
     width: 4rem;
     height: 4rem;
     background-color: var(--vermelho);
-    padding: 10px;
+    padding: 2%;
     border: none;
     border-radius: 50%;
     grid-column: 2;
@@ -101,7 +107,6 @@ input {
 }
 
 .botaoNumero:hover{
-    border: 1px solid var(--preto);
     color: var(--branco);
     background-color: var(--cinza-claro);
 }
@@ -120,7 +125,6 @@ input {
 
 .botoesElementos:hover,
 #btIgual:hover{
-    border: 1px solid var(--preto);
     color: var(--branco);
     background-color: var(--cinza-claro);
 }

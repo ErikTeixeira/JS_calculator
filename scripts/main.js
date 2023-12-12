@@ -5,8 +5,15 @@ let botoesElementos = document.querySelectorAll(".botoesElementos");
 
 let textoErro = document.querySelector("h3")
 
-let btIgual = document.getElementById("btIgual");
-let btLimpar = document.getElementById("btLimpar");
+
+const sunIcon = "imgs/SunIcon.svg";
+const moonIcon = "imgs/MoonIcon.svg";
+
+const gitClaro = "imgs/GitHubLight.svg";
+const gitEscuro = "imgs/GitHubDark.svg";
+
+const temaClaro = "styles/light.css";
+const temaEscuro = "styles/dark.css";
 
 
 let visorNumeros = document.getElementById("visorNumeros");
@@ -77,5 +84,27 @@ function mostrarResultado() {
     let resultado = calculoResultado();
     visorNumeros.value = resultado;
     listaNumerosVisor = [String(resultado)]; // Atualiza a lista apenas com o resultado
+}
+
+
+
+function mudarTema(){
+    const tema = document.getElementById("tema");
+    const imgIcon = document.getElementById("imgIcon");
+    const gitHubIcon = document.getElementById("gitHubIcon");
+
+    if (tema.getAttribute("href") === temaClaro) {
+        setTimeout(() => {
+            tema.setAttribute("href", temaEscuro);
+            imgIcon.setAttribute("src", sunIcon);
+            gitHubIcon.setAttribute("src", gitClaro);
+        }, 100);
+    } else {
+        setTimeout(() => {
+            tema.setAttribute("href", temaClaro);
+            imgIcon.setAttribute("src", moonIcon);
+            gitHubIcon.setAttribute("src", gitEscuro);
+        }, 100);
+    }
 }
 
