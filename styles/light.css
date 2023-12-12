@@ -1,0 +1,145 @@
+
+body{
+    background-color: var(--cor-de-fundo-light);
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+h1{
+    color: var(--cinza-claro);
+    font-weight: 700;
+    display: flex;
+    margin: 10px;
+}
+
+.iconTheme{
+    background-color: transparent;
+    border: transparent;
+    width: 2rem;
+    height: 2.5rem;
+    margin: 10px;
+}
+
+#imgIcon{
+    cursor: pointer;
+}
+
+.linkGitHub{
+    width: 2.1rem;
+    height: 2.1rem;
+}
+
+.iconTheme img,
+.linkGitHub img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Garante que a imagem não seja distorcida */
+}
+
+.calculadora{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+
+input {
+    padding: 15px;
+    color: var(--cinza-claro2);
+    font-size: 1em;
+    cursor: pointer;
+    width: 88%;
+    outline: none;
+    background-color: var(--branco);
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    margin: 0.2em;
+    grid-row: 1;
+}
+
+#btLimpar{
+    font-weight: 700;
+    color: var(--branco);
+    font-size: 1.2rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--vermelho);
+    padding: 2%;
+    border: none;
+    border-radius: 50%;
+    grid-column: 2;
+    grid-row: 1;
+    transition: all 0.3s ease;
+}
+
+#btLimpar:hover{
+    color: var(--vermelho);
+    background-color: var(--branco);
+}
+
+
+.elementosCalculadora{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-row: 3;
+}
+
+.botaoNumero{
+    color: var(--cinza-claro2);
+    font-size: 1.2rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--branco);
+    padding: 5px;
+    border: none;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.botaoNumero:hover{
+    color: var(--branco);
+    background-color: var(--cinza-claro);
+}
+
+
+.botoesElementos,
+#btIgual{
+    color: var(--cinza-claro2);
+    font-size: 1.2rem;
+    background-color: var(--branco);
+    padding: 5px;
+    border: none;
+    border-radius: 46%;
+    transition: all 0.3s ease;
+}
+
+.botoesElementos:hover,
+#btIgual:hover{
+    color: var(--branco);
+    background-color: var(--cinza-claro);
+}
+
+
+section {
+    padding-bottom: 60px;
+    position: relative;
+}
+
+footer {
+    color: var(--preto);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
