@@ -1,4 +1,4 @@
-@import url("light.css");
+/* @import url("light.css"); */
 @import url("dark.css");
 @import url("footer.css");
 
@@ -16,13 +16,13 @@
     --cor-de-fundo-light: #EBECEE;
     --cor-de-fundo-dark: #363639;
     --branco: #FFFFFF;
-    --laranja: #EB9B00;
-    --azul: #002F52;
-    --azul-claro: #0078d4;
+    --branco2: #dddddd;
+    --laranja: rgb(245, 164, 15);
+    --laranja-escuro: rgb(229, 154, 14);
     --vermelho: rgb(255, 38, 38);
     --preto: #000000;
     --cinza-claro: #858585;
-    --cinza-claro2: rgb(87, 87, 87);
+    --cinza-claro2: rgb(101, 101, 101);
     --fonte-principal: 'Poppins', sans-serif;
     --fonte-secundaria: 'Josefin Sans', sans-serif;
 }

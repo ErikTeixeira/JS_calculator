@@ -50,7 +50,7 @@ input {
     color: var(--cinza-claro2);
     font-size: 1em;
     cursor: pointer;
-    width: calc(100% - 4rem);
+    width: 88%;
     outline: none;
     background-color: var(--branco);
     border: none;
@@ -123,4 +123,19 @@ input {
     border: 1px solid var(--preto);
     color: var(--branco);
     background-color: var(--cinza-claro);
+}
+
+
+section {
+    padding-bottom: 60px;
+    position: relative;
+}
+
+footer {
+    color: var(--preto);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
 }
